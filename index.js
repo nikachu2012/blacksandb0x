@@ -5,8 +5,8 @@ const app = express();
 
 const listener = app.listen(80, function () {
 
-    console.log(listener.address().port);
     console.log(`hackSandb0x Server v${version} / (C) nikachu2012`)
+    console.log('port: ', listener.address().port);
 
 });
 
