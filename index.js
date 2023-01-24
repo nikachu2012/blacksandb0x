@@ -11,5 +11,11 @@ const listener = app.listen(80, function () {
 });
 
 app.get('/view', function (req, res) {
-    res.send(`data: ${res.query.send}`)
+    let send = [];
+    // debug
+    const data = Buffer.from(decodeURIComponent(req.query.d), 'base64').toString();
+    send.push(data)
+
+    res.send(send.join(''))
 });
+
