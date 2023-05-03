@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+html,
+body {
+    overflow: hidden;
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+pre code {
+    font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+}
+
+.code {
+    width: 100vw;
+    height: calc(100vh - 30px);
+    background-color: #1e1e1e;
+
+    overflow: scroll;
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.code::-webkit-scrollbar {
+    display: none;
+}
+
+.title {
+    width: 100vw;
+    height: 30px;
+    background-color: #333;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: white;
+}
+
+.left {
+    font-size: small;
+    margin-left: 10px;
+}
+
+.right {
+    font-size: small;
+
+    margin-right: 10px;
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
+
+
+pre {
+    counter-reset: rowNumber;
+}
+
+pre span.row-number {
+    counter-increment: rowNumber;
+}
+
+pre span.row-number::before {
+    content: counter(rowNumber);
+
+    width: 2rem;
+    display: inline-block;
+    color: #aaa;
+}
